@@ -6,7 +6,7 @@ public class HousesRunner {
 		//Here we call the run() method from the Houses class
 		Houses houseBuilder = new Houses();
 		houseBuilder.run();
-
+		
 
 	}
 
