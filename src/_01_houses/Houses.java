@@ -18,42 +18,59 @@ public class Houses {
 		for(int drawhous = 10; drawhous > 0; drawhous--) {
 			int size = ran.nextInt(3);
 			if(size==0) {
-				drawhouse("small");
+				drawpointyroof("small");
 			}
 			else if(size==1) {
-				drawhouse("medium");
+				drawpointyroof("medium");
 			}
 			else if(size==2) {
-				drawhouse("large");
+				drawpointyroof("large");
 			}
 			
 		}
 	}
-	void drawhouse( int height) {
-			rob.setAngle(0);
-			rob.move(height);
-			rob.turn(90);
-			rob.move(30);
-			rob.turn(90);
-			
-			rob.move(height);
-			rob.turn(-90);
-			rob.setPenColor(0, 255, 0);
-			rob.move(20);
-			rob.turn(-90);
-			rob.setPenColor(0, 0, 0);
+	void drawflatroof( int height) {
+		rob.setAngle(0);
+		rob.move(height);
+		rob.turn(90);
+		rob.move(30);
+		rob.turn(90);
+		
+		
+		rob.move(height);
+		rob.turn(-90);
+		rob.setPenColor(0, 255, 0);
+		rob.move(20);
+		rob.turn(-90);
+		rob.setPenColor(0, 0, 0);
 		}
-	void drawhouse( String height) {
+	void drawpointyroof( String height) {
 			if(height.equals("small")){
-				drawhouse(60);
+				drawpointyroof(60);
 			}
 			else if(height.equals("medium")) {
-				drawhouse(120);
+				drawpointyroof(120);
 			}
 			else if(height.equals("large")) {
-				drawhouse(250);
+				drawflatroof(250);
 			}
 	}
+	void drawpointyroof( int height) {
+		rob.setAngle(0);
+		rob.move(height);
+		rob.turn(45);
+		rob.move(30);
+		rob.turn(90);
+		rob.move(30);
+		rob.turn(45);
+		
+		rob.move(height);
+		rob.turn(-90);
+		rob.setPenColor(0, 255, 0);
+		rob.move(20);
+		rob.turn(-90);
+		rob.setPenColor(0, 0, 0);
+		}
 	}
 
 
